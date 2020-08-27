@@ -1,0 +1,76 @@
+#registrarion-form {
+    width: 100vw;
+    height: 100vh;
+}
+
+form{
+    width: 100%;
+    max-width: 74rem;
+    border-radius: 0.8rem;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+form fieldset {
+    border: 0;
+    padding: 0 2.4rem;
+    margin-top: 20rem;
+    display: flex;
+}
+
+form legend {
+    font: 700 2.4rem Roboto;
+    color: var(--color-text-title);
+    margin-bottom: 2.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: 1.6rem;
+    border-bottom: 1px solid purple;
+}
+
+form label {
+    margin-top: 1rem;
+}
+
+form input{
+    width: 100%;
+    height: 5.6rem;
+    margin-top: 0.8rem;
+    border-radius: 0.8rem;
+    background: #fffffe;
+    border: 1px solid #bdbdba;
+    outline: 0;
+    padding: 0 1.6rem;
+    font: 1.6rem Archivo;
+}
+
+button {
+    background: green;
+    color: white;
+    font-weight: 700;
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: 1.3rem;
+    border: 1px solid black;
+    border-radius: 0.8rem;
+    margin-top: 2rem;
+    margin-left: 57rem;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #00ab1e;
+    margin-bottom: 0.1rem;
+}
+
+@media (max-width: 730px){
+    button {
+        margin-left: 0;
+        width: 100%;
+    }
+    form {
+        flex-direction: row;
+    }
+}
