@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 
 import './style.css'
 
@@ -7,6 +8,7 @@ import axios from '../../services/api';
 function Register() {
 
   const [ users, setUsers ] = useState({name: ""},{ email: ""});
+  const history = useHistory();
 
   function inputHandler(input){
     const key = input.target.name;
@@ -19,11 +21,18 @@ function Register() {
     const { name, email } = users;
     
     try{
-      await axios.post('/create', { name, email });
-      console.log("Usuario criado!")
-  
+      const result = await axios.post('/create', { name, email });
+      
+      //Limpa os campos de input
       document.getElementsByTagName('input').name.value = ""
       document.getElementsByTagName('input').email.value = ""
+      
+      //Cria o alerta e manda para a tela de lista de usuarios
+      if (result.status === 202) {
+        alert("Usuario criado com sucesso!")
+        history.push('/users');
+      }
+
     } catch (error) {
       console.error(error);
       console.error("Falhou devido a formato de dados inválidos enviados");

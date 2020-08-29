@@ -5,7 +5,7 @@ const express = require('express');
 const { body } = require('express-validator');
 
 // Importing the functionallities from userController class
-const UserController = require('./controllers/UserController');
+const UserController = require('./controllers/UserController/UserController');
 
 // Using a feature from express lib to deal with routes
 const routes = express.Router();

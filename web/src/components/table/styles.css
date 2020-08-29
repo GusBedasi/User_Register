@@ -1,0 +1,13 @@
+table {
+    margin: 0 auto;
+}
+
+.table-container {
+    width: 90vw;
+    height: auto;
+    background-color: #fffffe;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}

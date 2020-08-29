@@ -9,7 +9,8 @@ function Routes() {
   return (
     <BrowserRouter>
         <Route path="/" component={Register} exact/>
-        <Route path="/list" component={UserList}/>
+        <Route path="/users" component={UserList}/>
+        <Route path="/404" component={() => { return <div> NOT FOUND 404</div> }}/>
     </BrowserRouter>
   );
 }
