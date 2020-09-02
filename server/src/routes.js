@@ -16,6 +16,7 @@ routes.post('/create', [
     body('name').isLength({ min: 3, max: 15}), 
     body('email').isEmail()
 ], UserController.create);
+routes.delete('/delete/:id',UserController.delete);
 
 // Exporting routes to use on server.js
 module.exports = routes;

@@ -11,14 +11,19 @@ import './styles.css'
 
 import axios from '../../services/api';
 
+import DeleteButton from '../button/DeleteButton';
+import EditButton from '../button/EditButton';
+
 const StyledTableCell = withStyles((theme) => ({
   head: {
     backgroundColor: theme.palette.common.black,
     color: theme.palette.common.white,
-    fontSize: 14
+    fontSize: 14,
+    textAlign: "center"
   },
   body: {
     fontSize: 14,
+    textAlign: "center"
   },
 }))(TableCell);
 
@@ -52,13 +57,14 @@ export default function SimpleTable() {
         .catch(error => {
         console.error(error);
         })
-    }, [users.id])
+    }, [users])
 
     const rows = users.map(user => {
         return createData(user.id, user.name, user.email);
     })
 
     const classes = useStyles();
+
 
   return (
     <TableContainer className="table-container">
@@ -67,6 +73,7 @@ export default function SimpleTable() {
           <StyledTableRow className="table-row">
             <StyledTableCell className="table-cell">Name:</StyledTableCell>
             <StyledTableCell className="table-cell">E-mail</StyledTableCell>
+            <StyledTableCell className="table-cell">Actions</StyledTableCell>
           </StyledTableRow>
         </TableHead>
         <TableBody>
@@ -74,6 +81,7 @@ export default function SimpleTable() {
             <StyledTableRow key={row.id} className="table-row">
               <StyledTableCell className="table-cell" component="th" scope="row">{row.name}</StyledTableCell>
               <StyledTableCell className="table-cell">{row.email}</StyledTableCell>
+              <StyledTableCell className="table-cell"> <DeleteButton data={row}/></StyledTableCell>
             </StyledTableRow>
           ))}
         </TableBody>

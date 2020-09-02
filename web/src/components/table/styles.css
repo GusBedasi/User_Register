@@ -11,3 +11,10 @@ table {
 ::-webkit-scrollbar {
     width: 10px;
 }
+
+.input-block {
+    padding: 5px;
+    border-radius: 0.8rem;
+    border: 1px solid #c4c4c4;
+    transition: 1s;
+}

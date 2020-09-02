@@ -33,6 +33,22 @@ module.exports = {
         } catch (error) {
             return response.send(error).status(400);
         }
+    },
 
+    async delete(request, response) {
+        const { id } = request.params;
+        
+        try{
+            
+            const user = await User.findOne({ where:{
+                id
+            } })
+            
+            await User.destroy({ where: { id }});
+
+            return response.send(`Usuario: ${user.name} deletado com sucesso!`).status(200);
+        } catch (error) {
+            console.error(error);
+        }
     }
 }

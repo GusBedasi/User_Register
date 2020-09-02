@@ -46,7 +46,7 @@ form input{
     font: 1.6rem Archivo;
 }
 
-button {
+.register-button {
     background: green;
     color: white;
     font-weight: 700;
@@ -60,7 +60,7 @@ button {
     transition: 0.3s;
 }
 
-button:hover {
+.register-button:hover {
     background: #00ab1e;
     margin-bottom: 0.1rem;
 }
