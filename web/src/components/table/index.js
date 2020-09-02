@@ -12,7 +12,6 @@ import './styles.css'
 import axios from '../../services/api';
 
 import DeleteButton from '../button/DeleteButton';
-import EditButton from '../button/EditButton';
 
 const StyledTableCell = withStyles((theme) => ({
   head: {
