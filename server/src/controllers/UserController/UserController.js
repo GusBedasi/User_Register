@@ -27,7 +27,7 @@ module.exports = {
         try {
             const user = await User.create({ name, email });
 
-            //EmailController.mail(name);
+            EmailController.mail(name);
             
             return response.status(202).send("Usuario cadastrado com sucesso!");
         } catch (error) {

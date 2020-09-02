@@ -15,7 +15,13 @@ só então após a confirmação os dados do usuário sejam salvos no banco de d
 ### Pagina 404 not found
 Adicionado destino 404 para endereços não programados, a pagina 404 em si é só uma arrow function que retorna um div com a mensagem 404 not found.
 
-### Planos
-Adicionar a validação do e-mail citada acima, atualizar a tela de listagem de usuários para algo mais interativo, visto que hoje é só uma tabela que lista os usuário do banco de dados.
+### Listagem de usuários cadastrados
+Agora a listagem está melhor estilizada com opção de excluir um registro existente.
 
-### Conforme for terminando a aplicação o readme vai sendo atualizado com a parte do usage
+### Imagens de como está o projeto
+
+### Tela de registro
+![](web/src/assets/register-screen.png)
+
+### Tela de listagem
+![](web/src/assets/user-list-screen.png)
